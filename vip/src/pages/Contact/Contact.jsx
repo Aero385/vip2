@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './Contact.scss';
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div className='app__contact'>Contact</div>
   )
 }
 

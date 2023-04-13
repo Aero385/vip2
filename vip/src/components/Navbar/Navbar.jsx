@@ -4,6 +4,7 @@ import { images } from '../../constants';
 import { HiMenu, HiX} from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
+
 const list = [ 'home', 'about', 'our fleet', 'service', 'contact'];
 const languages = [
   { lang: 'Eesti', imgSrc: images.est },
