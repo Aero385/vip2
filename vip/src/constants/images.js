@@ -15,9 +15,16 @@ import mil from '../assets/service/mil.png'
 import private1 from '../assets/service/private.png'
 import sport from '../assets/service/sport.png'
 import wed from '../assets/service/wed.png'
+import air from '../assets/airport.jpg'
+import dterm from '../assets/dtermial.jpg'
+import tln_busStation from '../assets/tln_busStation.jpg'
+import test from '../assets/test.png'
 
 export default {
-
+  test,
+  tln_busStation,
+  dterm,
+  air,
   logo,
   rus,
   eng,

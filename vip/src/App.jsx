@@ -13,7 +13,7 @@ function App() {
       <Main id='main'/>
       <Bus id='bus'/>
       <Service id='service'/>
-      <Contact id='contact'/>
+      
       <Footer/>
     </div>
   )
