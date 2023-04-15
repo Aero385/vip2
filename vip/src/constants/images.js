@@ -19,8 +19,10 @@ import air from '../assets/airport.jpg'
 import dterm from '../assets/dtermial.jpg'
 import tln_busStation from '../assets/tln_busStation.jpg'
 import test from '../assets/test.png'
+import bgCon from '../assets/bgCon.jpeg'
 
 export default {
+  bgCon,
   test,
   tln_busStation,
   dterm,
