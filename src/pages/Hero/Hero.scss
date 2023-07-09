@@ -1,0 +1,430 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero__slider {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease-in-out;
+  z-index: -1;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    object-fit:cover;
+    animation: zoomAnimation 20s infinite alternate;
+    transition: opacity 2s ease-in-out;
+    transform: scale(1);
+
+ 
+
+    &.active {
+      opacity: 1;
+    }
+
+    @keyframes zoomAnimation {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.slider__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  color: #fff;
+  z-index: 10;
+
+  &.active {
+    opacity: 1;
+    z-index: 50;
+  }
+
+  h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+  }
+}
+
+.hero__info {
+  height: 20vh;
+  background: rgba(30, 31, 45, 0.5);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 80vh;
+  border-top: 2px solid rgba(255,255,255,.1);
+
+  .info__wrapper {
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .info__wrapper:not(:last-child)::after {
+    content: "";
+    width: 2px;
+    height: 15vh;
+    background-color: rgba(255,255,255,.2);
+    position: relative;
+    left: 50px;
+
+    @media (max-width: 858px){
+      display: none;
+    }
+  }
+
+  .info__wrapper:hover img {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.2);
+  }
+  
+  .info__wrapper img {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  h1 {
+    color: var(--nav-gold);
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1rem;
+    color: #fff;
+  }
+
+  img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 858px) {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 50px 0;
+      background: rgb(30, 31, 45);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      color: white;
+      justify-content:space-evenly;
+      align-items:center;
+    
+    .info__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    
+      img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+      }
+    
+      h1 {
+        color: var(--nav-gold);
+        text-transform: uppercase;
+      }
+    
+      p {
+        font-size: 14px;
+        line-height: 1.8rem;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+// .app__hero {
+//   position: relative;
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: center;
+//   background-color: white;
+
+//   // Add media query to adjust flex-direction on small screens
+//   @media screen and (max-width: 450px) {
+//     flex-direction: column;
+//   }
+
+//   .hero__head {
+//     position: relative;
+//     width: 100%;
+
+//     .head__black {
+//       background-color: black;
+//       height: 110px;
+
+//       // Add media query to adjust height on small screens
+//       @media screen and (max-width: 450px) {
+//         height: 82px;
+//       }
+//     }
+//     .hero__bg {
+//       display: block;
+//       object-fit: cover;
+//       margin-bottom: 0;
+//       filter: brightness(0.3);
+//       width: 100%;
+//       height: auto;
+//     }
+//   }
+
+//   .head__image-text {
+//     position: absolute;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     top: 60%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     color: white;
+//     justify-content: center;
+
+//     // Add media query to adjust positioning on small screens
+//     @media screen and (max-width: 450px) {
+//       position: relative;
+//       transform: translate(0, 0);
+//       color: white;
+//       left: 0;
+//       padding: 1rem;
+//       background: linear-gradient(to bottom, #202020, #adacac, #202020);
+//       text-align: center;
+//       top: 0;
+//     }
+
+//     h1 {
+//       text-transform: uppercase;
+//       font-size: 2.5rem;
+//       text-align: center;
+
+//       // Add media query to adjust font size on small screens
+//       @media screen and (max-width: 450px) {
+//         font-size: 1.5rem;
+//         margin-bottom: 0.5rem;
+//       }
+//     }
+
+//     .head__experience {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       gap: 1rem;
+//       margin: 1.5rem 0;
+
+//       // Add media query to adjust margin on small screens
+//       @media screen and (max-width: 450px) {
+//         margin: 1rem 0;
+//       }
+
+//       p {
+//         font-size: 2rem;
+
+//         // Add media query to adjust font size on small screens
+//         @media screen and (max-width: 450px) {
+//           font-size: 1.2rem;
+//         }
+//       }
+//     }
+//   }
+// }
+//   .hero__meet {
+//     flex-direction: column;
+//     color: white;
+//     padding: 2rem 1rem;
+//     bottom: 0;
+
+//     h1 {
+//       span {
+//         color: #e6d709;
+//         text-transform: uppercase;
+//       }
+//     }
+
+//     // Add media query to adjust padding on small screens
+//     @media screen and (max-width: 450px) {
+//       padding: 1rem;
+//       text-align: center;
+//     }
+
+//     h1 {
+//       // Add media query to adjust font size on small screens
+//       @media screen and (max-width: 450px) {
+//         font-size: 2rem;
+//       }
+//     }
+//   }
+// .meet__wrapper {
+//   display: flex;
+//   max-width: 1140px;
+
+//   @media screen and (max-width:450px) {
+//     flex-direction: column;;
+//   }
+// }
+
+// .meet__container {
+//   width: 300px;
+//   margin: 0;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   margin-top: 1rem;
+
+  
+//   @media screen and (max-width:450px) {
+//     margin-top: 2rem;
+//   }
+
+//   span {
+//     font-size: 1.2rem;
+//     color: #e6d709;
+//     font-weight: 800;
+
+//   }
+
+//   div {
+//     width: 200px;
+//     height: 200px;
+//     border: 3px solid #e6d709;
+//     border-radius: 50%;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size:cover;
+//     transition: all 0.5s;
+//     margin-top: 1rem;
+
+//     @media screen and (max-width:450px) {
+//       margin-top: 1rem;
+//     }
+
+//     &:hover {
+//       transform: scale(1.7);
+      
+//     }
+//   }
+// }
+
+// .airport {
+//   background-image: url('../../assets/airport.jpg');
+// }
+
+// .terminal {
+//   background-image: url('../../assets/dtermial.jpg');
+// }
+
+// .busStation {
+//   background-image: url('../../assets/tln_busStation.jpg');
+// }
+
+
+
+// .hero__info {
+//   width: 100%;
+//   background:linear-gradient(to bottom, #202020, #043797, #28467c, );
+
+// }
+
+// .wrapper {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   max-width: 1200px;
+//   margin: auto;
+//   padding: 2rem 0;
+
+//   @media screen and (max-width:450px) {
+//     flex-direction: column;
+//     gap: 2rem;
+//   }
+
+//     h2 {
+//       color: white;
+//       text-transform: uppercase;
+//     }
+
+//     p {
+//       color: white;
+//     }
+
+//     a {
+//       text-decoration: none;
+//     }
+// }
+
+// .info-icons {
+//   color: white;
+//   font-size: 40px;
+//   margin-right: 1rem;
+// }
+
+// .info__link-phone:hover,
+// .info__link-phone:hover * {
+//   color: rgb(8, 173, 8);
+// }
+
+// .info__link-addres:hover,
+// .info__link-addres:hover * {
+//   color: red;
+// }
+
+// .info__button {
+//   padding: 1rem 1rem;
+//   background-color: white;
+//   border-radius: 30px;
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   text-decoration: none;
+//   color: #202020;
+//   transition: all ease-in-out 0.3s;
+  
+//   &:hover {
+//     background-color: #7c7c7c;
+//     color: white;
+
+//   }
+// }
+
+

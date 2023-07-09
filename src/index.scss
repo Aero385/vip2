@@ -1,0 +1,55 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color:  #242424;
+  // background-color:  rgba(41, 40, 40, 0.87);
+  z-index: 0;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --primary-color: #edf2f8;
+  --secondary-color: #313bac;
+  --black-color: #030303;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #98a0ad;
+  --brown-color: #46364a;
+  --white-color: #ffffff;
+  --mobile: 450px;
+  --desktop-large: 1600px;
+
+  --nav-blue:#12d2db;
+  --nav-white:#fcf2fa;
+  --nav-purple:#912a7eaa;
+  --nav-shadow:0 5px 10px 5px rgba(0, 0, 0, .3);
+  --nav-col: linear-gradient(to right, rgba(178, 47, 147, .6)5%, rgba(35, 6, 34, .9));
+  --nav-gold:#D3C19F;
+
+}
+
+* {
+  // font-family: 'Merriweather', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+.app__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+p {
+  font-family: 'Merriweather', sans-serif;
+}

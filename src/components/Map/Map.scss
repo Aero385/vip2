@@ -1,0 +1,14 @@
+.map__wrapper {
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 450px) {
+    display: flex;
+    
+  }
+
+  .rsm-svg {
+    width: 100%;
+    height: 100%;
+  }
+}
