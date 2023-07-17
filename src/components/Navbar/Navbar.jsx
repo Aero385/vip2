@@ -123,6 +123,7 @@
 
 // export default Navbar
 import { images } from '../../constants';
+// import { HiMenu, HiX} from 'react-icons/hi';
 
 import React from 'react';
 import './Navbar.scss';
@@ -141,6 +142,7 @@ const Navbar = () => {
     <nav>
       <input type='checkbox' id='check'></input>
       <label for='check' class='checkbtn'>
+        X
         <i className="bx bx-menu"></i>
       </label>
       <label className='logo'>

@@ -8,26 +8,26 @@ import MyButton from '../../components/MyButton/MyButton';
 const slides = [
   {
     image: images.s2,
-    titleFirst: 'Slide ',
-    titleSecond: 'one',
+    titleFirst: 'private ',
+    titleSecond: 'bus transfers',
     description: 'Slide 1 Description',
   },
   {
     image: images.s3,
-    titleFirst: 'Slide ',
-    titleSecond: 'two',
+    titleFirst: 'comfortable ',
+    titleSecond: 'transfers',
     description: 'Slide 2 Description',
   },
   {
     image: images.s4,
-    titleFirst: 'Slide',
-    titleSecond: 'three',
+    titleFirst: 'book ',
+    titleSecond: 'your trip',
     description: 'Slide 3 Description',
   },
   {
     image: images.s1,
-    titleFirst: 'Slide ',
-    titleSecond: 'four',
+    titleFirst: 'luxury ',
+    titleSecond: 'classes',
     description: 'Slide 4 Description',
   },
 ];
@@ -57,7 +57,7 @@ const Hero = () => {
                   <span style={{ color: '#D3C19F' }}>{slide.titleFirst} </span> 
                   <span style={{ color: 'white' }}>{slide.titleSecond}</span>
                 </h1>
-                <p>{slide.description}</p>
+                <p className='content__text'>{slide.description}</p>
                 <MyButton text='book now'/>
               </div> 
             </div>

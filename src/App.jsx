@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Hero/>
-      <Main id='main'/>
+      {/* <Main id='main'/> */}
       {/* <Bus id='bus'/>
       <Service id='service'/>
       <Contact id='contact'/>
