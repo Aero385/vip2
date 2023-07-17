@@ -1,0 +1,168 @@
+.app__footer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(35,35,35,.8);
+  flex-direction: column;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2rem 2rem 1rem;
+  max-width: 1140px;
+  width: 100%;
+  position: relative;
+
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+    gap: 1.5rem
+  }
+
+  span {
+    text-transform: uppercase;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  div {
+    width: 230px;
+  }
+}
+
+.footer__about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+
+  p {
+    color:#a8a8a8;
+  }
+}
+
+.footer__contact {
+
+  ul {
+    list-style: none;
+    
+    li:first-child{
+      margin-top: 1rem;
+    }
+    li {
+      margin-bottom: 1rem;
+      color:#a8a8a8;
+    }
+
+    a {
+      color:#a8a8a8;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer__link:hover {
+  color: white;
+  .phone {
+    color: rgb(9, 197, 9);
+  }
+  .email {
+    color: red;
+  }
+}
+
+.footer__icon {
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem 0;
+
+  @media screen and (max-width: 450px) {
+    margin: 0 auto;
+  }
+
+  a {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    text-decoration: none;
+
+    font-size: 2.5rem;
+    transition: all ease-in-out 0.3s;
+  }
+}
+
+$fb-blue: rgb(30, 30, 247);
+$vb-purple: rgb(97, 9, 199);
+$wa-green: rgb(49, 160, 49);
+
+.social__fb {
+  background-color: $fb-blue;
+}
+.social__vb {
+  background-color: $vb-purple;
+}
+.social__wa {
+  background-color: $wa-green;
+}
+
+.social__fb:hover {
+  background-color: white;
+}
+
+.social__vb:hover {
+  background-color: white;
+}
+
+.social__wa:hover {
+  background-color: white;
+}
+
+.fb__icon,
+.vb__icon,
+.wa__icon {
+  color: white;
+  transition: all ease-in-out 0.3s;
+}
+
+.social__fb:hover .fb__icon {
+  color: blue;
+}
+
+.social__vb:hover .vb__icon {
+  color: $vb-purple;
+}
+
+.social__wa:hover .wa__icon {
+  color: $wa-green;
+}
+
+.copyright {
+  height: 2rem;
+  background-color: black;
+  
+}
+
+.copyright__wrapper {
+  max-width: 1140px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  @media screen and (max-width:450px) {
+    justify-content: center;
+    
+  }
+
+  p {
+    color: rgb(160, 155, 155);
+  }
+}
